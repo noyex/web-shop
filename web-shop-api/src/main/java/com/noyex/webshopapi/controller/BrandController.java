@@ -38,4 +38,9 @@ public class BrandController {
         brandService.deleteBrand(brandId);
         return ResponseEntity.ok("Brand deleted");
     }
+
+    @GetMapping("/get/{brandId}")
+    public ResponseEntity<Brand> getBrandById(@PathVariable Long brandId){
+        return ResponseEntity.ok(brandService.getBrandById(brandId));
+    }
 }

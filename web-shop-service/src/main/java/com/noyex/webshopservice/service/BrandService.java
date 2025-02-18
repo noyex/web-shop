@@ -44,4 +44,13 @@ public class BrandService implements IBrandService{
         brand.setName(brandDTO.getName());
         return brandRepository.save(brand);
     }
+
+    @Override
+    public Brand getBrandById(Long brandId) {
+        Optional<Brand> brandOptional = brandRepository.findById(brandId);
+        if (brandOptional.isEmpty()) {
+            throw new IllegalArgumentException("Brand not found");
+        }
+        return brandOptional.get();
+    }
 }
