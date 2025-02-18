@@ -2,6 +2,7 @@ package com.noyex.webshopdata.model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 
@@ -31,8 +32,9 @@ public class Product {
     @DecimalMin(value = "0.0", inclusive = true, message = "Discount cannot be negative")
     private double discount;
 
-    @NotNull(message = "Image is required")
-    private String image;
+    @Valid
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Image> images = new ArrayList<>();
 
     @Min(value = 0, message = "Quantity can't be negative")
     private int quantity;
