@@ -18,6 +18,9 @@ public class Order {
 
     private int quantity;
 
+    @ManyToOne
+    private User user;
+
     private double price;
 
     private LocalDateTime date;
