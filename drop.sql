@@ -1,4 +1,3 @@
-
 alter table if exists order drop foreign key if exists FK3b51sphq5i3qy7iai0o5lmu7l;
 alter table if exists order drop foreign key if exists FKt7abetueht6dd1gs9jyl3o4t7;
 alter table if exists product drop foreign key if exists FKs6cydsualtsrprvlf2bb3lcam;
