@@ -36,7 +36,7 @@ public class User {
     private List<Review> reviews = new ArrayList<>();
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Order> orders = new ArrayList<>();
+    private List<Orders> orders = new ArrayList<>();
 
     public void setPassword(String password) {
         if (password == null || password.trim().isEmpty()) {

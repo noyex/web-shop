@@ -19,7 +19,7 @@ public class BrandService implements IBrandService{
 
     @Override
     public List<Brand> getAllBrands() {
-        return brandRepository.getAll();
+        return brandRepository.findAll();
     }
 
     @Override

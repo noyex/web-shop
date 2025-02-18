@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface BrandRepository extends JpaRepository<Brand, Long> {
-    List<Brand> getAll();
+    List<Brand> findAll();
     Brand findByName(String name);
 }
